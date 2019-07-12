@@ -1,0 +1,31 @@
+<p>
+    Tela do Aluno!
+  </p>
+  Entre Com As Informações:<br>
+  <br>
+    matricula:<input type="text"[(ngModel)]="aluno.matricula">
+    nome:<input type="text"[(ngModel)]="aluno.nome">
+    cpf:<input type="text"[(ngModel)]="aluno.cpf">
+    telefone:<input type="text"[(ngModel)]="aluno.telefone">
+    email:<input type="text"[(ngModel)]="aluno.email">
+    <button type="button"(click)="addAluno()">Adicionar Aluno</button><br>
+    {{aluno.matricula}} {{aluno.nome}} {{aluno.cpf}} {{aluno.telefone}}  {{aluno.email}}<br>
+   
+    <table border="1">
+      <tr>
+        <th>Matricula:</th>
+        <th>Nome:</th>
+        <th>Cpf:</th>
+        <th>Telefone:</th> 
+        <th>Email:</th>
+      </tr>
+      <tr *ngFor="let item of alunos">
+        <td>{{item.matricula}}</td>
+        <td>{{item.nome}}</td>
+        <td>{{item.cpf}}</td>
+        <td>{{item.telefone}}</td>
+        <td>{{item.email}}</td>
+      </tr>
+    </table>
+  
+    

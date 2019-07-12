@@ -1,0 +1,22 @@
+<p>
+  Tela de Cliente!
+</p>
+Entre Com As Informações:<br>
+<br>
+  Nome:<input type="text"[(ngModel)]="cliente.nome">
+  Idade:<input type="text"[(ngModel)]="cliente.idade">
+  <button type="button"(click)="addcliente()">Adicionar Cliente</button><br>
+  {{cliente.nome}} {{cliente.idade}}<br>
+
+  <label *ngFor="let item of clientes">
+    {{item.nome}} {{item.idade}} <br>
+  </label>
+
+  <table border="1">
+    <tr>
+      <th>Nome:</th><th>Idade</th>
+    </tr>
+    <tr *ngFor="let item of clientes">
+      <td>{{item.nome}}</td><td>{{item.idade}}</td>
+    </tr>
+  </table>

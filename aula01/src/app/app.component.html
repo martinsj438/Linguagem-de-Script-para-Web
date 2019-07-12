@@ -1,0 +1,15 @@
+<h1>
+  {{title}}
+</h1>
+<meu-primeiro1-component></meu-primeiro1-component>
+<input type="text"[(ngModel)]="cliente">
+<button type="button" (click)="addCliente()">Adicionar Clientes</button><br>
+{{cliente}}
+<ul>
+<li *ngFor="let item of clientes">{{item}}</li>
+</ul>
+<table border="1">
+  <tr>
+    <td *ngFor="let item of cliente">{{item}}</td>
+  </tr>
+</table>
